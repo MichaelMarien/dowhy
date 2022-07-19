@@ -40,6 +40,7 @@
    :caption: Contributing
 
    contributing/index
+   contributing/contributing-pr
 
 .. toctree::
    :hidden: 
