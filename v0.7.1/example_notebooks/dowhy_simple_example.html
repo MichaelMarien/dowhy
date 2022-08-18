@@ -2,9 +2,17 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B139P18WHM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-B139P18WHM');
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting started with DoWhy: A simple example &mdash; DoWhy | An end-to-end library for causal inference  documentation</title>
+  <title>Getting started with DoWhy: A simple example &mdash; DoWhy  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> DoWhy | An end-to-end library for causal inference
+            <a href="../index.html" class="icon icon-home"> DoWhy
           </a>
               <div class="version">
                 v0.7.1
@@ -116,7 +124,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">DoWhy | An end-to-end library for causal inference</a>
+          <a href="../index.html">DoWhy</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -417,7 +425,7 @@ div.rendered_html tbody tr:hover {
 <h1>Getting started with DoWhy: A simple example<a class="headerlink" href="#Getting-started-with-DoWhy:-A-simple-example" title="Permalink to this heading"></a></h1>
 <p>This is a quick introduction to the DoWhy causal inference library. We will load in a sample dataset and estimate the causal effect of a (pre-specified) treatment variable on a (pre-specified) outcome variable.</p>
 <p>First, let us load all required packages.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -451,14 +459,6 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-keywords are unexpanded, not using
-</pre></div></div>
-</div>
 <p>Now, let us load a dataset. For simplicity, we simulate a dataset with linear relationships between common causes and treatment, and common causes and outcome.</p>
 <p>Beta is the true causal effect.</p>
 <div class="nbinput docutils container">
@@ -486,19 +486,19 @@ keywords are unexpanded, not using
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-         X0   Z0        Z1        W0        W1        W2        W3 W4    v0  \
-0 -1.159514  1.0  0.488560 -1.726185 -0.239537  0.483154  1.746800  0  True
-1 -2.352524  1.0  0.945795  0.921872  0.758362 -1.770941 -0.093312  0  True
-2 -2.564969  1.0  0.915537 -0.760050 -0.119878  0.047808 -1.632917  3  True
-3 -2.723004  1.0  0.156947 -0.183512  1.455325 -1.334620 -0.360102  1  True
-4 -1.744329  0.0  0.922274 -0.571383 -0.580763  0.777947 -1.339817  3  True
+         X0   Z0        Z1        W0        W1        W2        W3 W4     v0  \
+0 -2.372318  0.0  0.596020  0.273131  2.418149  0.845902  0.094294  2   True
+1 -1.077168  0.0  0.852724 -0.002586  0.639895  0.596283  0.400526  3   True
+2 -1.145660  0.0  0.059789  2.319583 -1.574651 -1.229920 -0.880052  0  False
+3 -1.978860  0.0  0.425974  1.405655 -4.190096 -0.619735 -2.529248  2   True
+4 -1.504962  1.0  0.557808  0.471731 -0.680110  1.011637  0.418554  0   True
 
-          y
-0  8.329448
-1 -2.535149
-2  2.098202
-3  0.882404
-4  7.687972
+           y
+0  27.507098
+1  23.120664
+2  -1.998756
+3 -12.151759
+4   9.063990
 digraph {v0-&gt;y;W0-&gt; v0; W1-&gt; v0; W2-&gt; v0; W3-&gt; v0; W4-&gt; v0;Z0-&gt; v0; Z1-&gt; v0;W0-&gt; y; W1-&gt; y; W2-&gt; y; W3-&gt; y; W4-&gt; y;X0-&gt; y;}
 
 
@@ -574,9 +574,9 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W2,W4,W1,W3])
+─────(E[y|W3,W1,W4,W0,W2])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W2,W4,W1,W3,U) = P(y|v0,W0,W2,W4,W1,W3)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W3,W1,W4,W0,W2,U) = P(y|v0,W3,W1,W4,W0,W2)
 
 ### Estimand : 2
 Estimand name: iv
@@ -584,9 +584,9 @@ Estimand expression:
  ⎡                              -1⎤
  ⎢    d        ⎛    d          ⎞  ⎥
 E⎢─────────(y)⋅⎜─────────([v₀])⎟  ⎥
- ⎣d[Z₁  Z₀]    ⎝d[Z₁  Z₀]      ⎠  ⎦
-Estimand assumption 1, As-if-random: If U→→y then ¬(U →→{Z1,Z0})
-Estimand assumption 2, Exclusion: If we remove {Z1,Z0}→{v0}, then ¬({Z1,Z0}→y)
+ ⎣d[Z₀  Z₁]    ⎝d[Z₀  Z₁]      ⎠  ⎦
+Estimand assumption 1, As-if-random: If U→→y then ¬(U →→{Z0,Z1})
+Estimand assumption 2, Exclusion: If we remove {Z0,Z1}→{v0}, then ¬({Z0,Z1}→y)
 
 ### Estimand : 3
 Estimand name: frontdoor
@@ -624,18 +624,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W2,W4,W1,W3])
+─────(E[y|W3,W1,W4,W0,W2])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W2,W4,W1,W3,U) = P(y|v0,W0,W2,W4,W1,W3)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W3,W1,W4,W0,W2,U) = P(y|v0,W3,W1,W4,W0,W2)
 
 ## Realized estimand
-b: y~v0+W0+W2+W4+W1+W3
+b: y~v0+W3+W1+W4+W0+W2
 Target units: ate
 
 ## Estimate
-Mean value: 7.071314627462382
+Mean value: 8.595331214194452
 
-Causal Estimate is 7.071314627462382
+Causal Estimate is 8.595331214194452
 </pre></div></div>
 </div>
 <p>You can input additional parameters to the estimate_effect method. For instance, to estimate the effect on any subset of the units, you can specify the “target_units” parameter which can be a string (“ate”, “att”, or “atc”), lambda function that filters rows of the data frame, or a new dataframe on which to compute the effect. You can also specify “effect modifiers” to estimate heterogeneous effects across these variables. See <code class="docutils literal notranslate"><span class="pre">help(CausalModel.estimate_effect)</span></code>.</p>
@@ -667,18 +667,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W2,W4,W1,W3])
+─────(E[y|W3,W1,W4,W0,W2])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W2,W4,W1,W3,U) = P(y|v0,W0,W2,W4,W1,W3)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W3,W1,W4,W0,W2,U) = P(y|v0,W3,W1,W4,W0,W2)
 
 ## Realized estimand
-b: y~v0+W0+W2+W4+W1+W3
+b: y~v0+W3+W1+W4+W0+W2
 Target units: atc
 
 ## Estimate
-Mean value: 7.1458622883506795
+Mean value: 8.644245012491307
 
-Causal Estimate is 7.1458622883506795
+Causal Estimate is 8.644245012491307
 </pre></div></div>
 </div>
 </section>
@@ -767,18 +767,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W2,W4,W1,W3])
+─────(E[y|W3,W1,W4,W0,W2])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W2,W4,W1,W3,U) = P(y|v0,W0,W2,W4,W1,W3)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W3,W1,W4,W0,W2,U) = P(y|v0,W3,W1,W4,W0,W2)
 
 ## Realized estimand
-b: y~v0+W0+W2+W4+W1+W3
+b: y~v0+W3+W1+W4+W0+W2
 Target units: ate
 
 ## Estimate
-Mean value: 7.071314627462382
+Mean value: 8.595331214194452
 
-Causal Estimate is 7.071314627462382
+Causal Estimate is 8.595331214194452
 </pre></div></div>
 </div>
 </section>
@@ -813,9 +813,9 @@ Causal Estimate is 7.071314627462382
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add a random common cause
-Estimated effect:7.071314627462382
-New effect:7.0154205697232275
-p value:0.43999999999999995
+Estimated effect:8.595331214194452
+New effect:8.568518294097924
+p value:0.8400000000000001
 
 </pre></div></div>
 </div>
@@ -838,9 +838,9 @@ p value:0.43999999999999995
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Use a Placebo Treatment
-Estimated effect:7.071314627462382
-New effect:-0.06290092622841588
-p value:0.8600000000000001
+Estimated effect:8.595331214194452
+New effect:0.006692223927105838
+p value:1.0
 
 </pre></div></div>
 </div>
@@ -863,9 +863,9 @@ p value:0.8600000000000001
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Use a subset of data
-Estimated effect:7.071314627462382
-New effect:7.006219545964326
-p value:0.48
+Estimated effect:8.595331214194452
+New effect:8.595778724035716
+p value:0.98
 
 </pre></div></div>
 </div>
@@ -886,9 +886,9 @@ p value:0.48
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Use a subset of data
-Estimated effect:7.071314627462382
-New effect:7.010955261605278
-p value:0.6200000000000001
+Estimated effect:8.595331214194452
+New effect:8.607162100354708
+p value:0.78
 
 </pre></div></div>
 </div>
@@ -918,8 +918,8 @@ unobserved common cause’s effect.</p>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add an Unobserved Common Cause
-Estimated effect:7.071314627462382
-New effect:6.544386900868372
+Estimated effect:8.595331214194452
+New effect:8.43550304538304
 
 </pre></div></div>
 </div>
@@ -948,8 +948,8 @@ New effect:6.544386900868372
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add an Unobserved Common Cause
-Estimated effect:7.071314627462382
-New effect:(5.080055975332251, 6.875250630572715)
+Estimated effect:8.595331214194452
+New effect:(7.239506202086857, 8.509994947659798)
 
 </pre></div></div>
 </div>
@@ -980,8 +980,8 @@ New effect:(5.080055975332251, 6.875250630572715)
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add an Unobserved Common Cause
-Estimated effect:7.071314627462382
-New effect:(3.0569008618927644, 6.902672304572004)
+Estimated effect:8.595331214194452
+New effect:(4.328947043875652, 8.507612494685345)
 
 </pre></div></div>
 </div>
@@ -1010,8 +1010,8 @@ strength of observed confounders. There is an additional optional parameter sign
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add an Unobserved Common Cause
-Estimated effect:7.071314627462382
-New effect:(0.030808382042693934, 6.792091644750219)
+Estimated effect:8.595331214194452
+New effect:(-0.17556653179086032, 8.475859983392512)
 
 </pre></div></div>
 </div>
@@ -1054,7 +1054,6 @@ New effect:(0.030808382042693934, 6.792091644750219)
     <div class="rst-other-versions">
         <dl>
             <dt>Releases</dt>
-            <dd><a href="../../v0.1-alpha/index.html">v0.1-alpha</a></dd>
             <dd><a href="../../v0.1.1-alpha/index.html">v0.1.1-alpha</a></dd>
             <dd><a href="../../v0.2/index.html">v0.2</a></dd>
             <dd><a href="../../v0.4/index.html">v0.4</a></dd>
@@ -1063,10 +1062,14 @@ New effect:(0.030808382042693934, 6.792091644750219)
             <dd><a href="../../v0.6/index.html">v0.6</a></dd>
             <dd><a href="../../v0.7/index.html">v0.7</a></dd>
             <dd><a href="dowhy_simple_example.html">v0.7.1</a></dd>
+            <!-- TODO: add mechanism to add new version here. Probably just render them in from generate_docs.sh. -->
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../../main/index.html">main</a></dd>
+            <!-- hard-coding the link to main -->
+            <!-- It would be nice if this opened the same page on main branch, but that seems to be overkill
+                 right now. Therefore defaulting to the starting page (index). -->
+            <dd><a href="/dowhy/main/index.html">main</a></dd>
         </dl>
     </div>
 </div><script>

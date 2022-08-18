@@ -2,9 +2,17 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B139P18WHM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-B139P18WHM');
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DoWhy: Different estimation methods for causal inference &mdash; DoWhy | An end-to-end library for causal inference  documentation</title>
+  <title>DoWhy: Different estimation methods for causal inference &mdash; DoWhy  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> DoWhy | An end-to-end library for causal inference
+            <a href="../index.html" class="icon icon-home"> DoWhy
           </a>
               <div class="version">
                 v0.7.1
@@ -108,7 +116,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">DoWhy | An end-to-end library for causal inference</a>
+          <a href="../index.html">DoWhy</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -419,7 +427,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -432,14 +440,6 @@ div.rendered_html tbody tr:hover {
 <span class="kn">import</span> <span class="nn">dowhy.datasets</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-keywords are unexpanded, not using
-</pre></div></div>
 </div>
 <p>Now, let us load a dataset. For simplicity, we simulate a dataset with linear relationships between common causes and treatment, and common causes and outcome.</p>
 <p>Beta is the true causal effect.</p>
@@ -497,63 +497,63 @@ keywords are unexpanded, not using
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.0</td>
-      <td>0.550418</td>
-      <td>-1.199756</td>
-      <td>-2.115185</td>
-      <td>0.883753</td>
-      <td>-0.139494</td>
-      <td>-0.246588</td>
-      <td>False</td>
-      <td>-10.615157</td>
+      <td>1.0</td>
+      <td>0.078133</td>
+      <td>1.628882</td>
+      <td>-0.838492</td>
+      <td>0.953139</td>
+      <td>1.164031</td>
+      <td>1.000595</td>
+      <td>True</td>
+      <td>23.151226</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.0</td>
-      <td>0.568180</td>
-      <td>-1.628659</td>
-      <td>-0.804188</td>
-      <td>-0.164841</td>
-      <td>-0.117339</td>
-      <td>-1.554166</td>
-      <td>False</td>
-      <td>-11.099556</td>
+      <td>1.0</td>
+      <td>0.966869</td>
+      <td>1.839747</td>
+      <td>-1.148383</td>
+      <td>1.566979</td>
+      <td>-0.375117</td>
+      <td>1.559267</td>
+      <td>True</td>
+      <td>21.481722</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.0</td>
-      <td>0.900611</td>
-      <td>-2.108858</td>
-      <td>-0.141340</td>
-      <td>1.584626</td>
-      <td>0.652982</td>
-      <td>-0.276635</td>
-      <td>False</td>
-      <td>-1.551369</td>
+      <td>0.462169</td>
+      <td>0.130340</td>
+      <td>-0.195167</td>
+      <td>1.475420</td>
+      <td>2.208417</td>
+      <td>1.056500</td>
+      <td>True</td>
+      <td>21.715178</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.0</td>
-      <td>0.735061</td>
-      <td>-0.429674</td>
-      <td>-0.969907</td>
-      <td>-0.911870</td>
-      <td>2.477819</td>
-      <td>-0.109155</td>
+      <td>1.0</td>
+      <td>0.595242</td>
+      <td>0.566084</td>
+      <td>-2.260169</td>
+      <td>2.021108</td>
+      <td>0.991661</td>
+      <td>-1.401047</td>
       <td>True</td>
-      <td>8.591388</td>
+      <td>13.882709</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.0</td>
-      <td>0.170212</td>
-      <td>-2.109262</td>
-      <td>1.227031</td>
-      <td>-0.737618</td>
-      <td>1.815259</td>
-      <td>-0.731997</td>
+      <td>1.0</td>
+      <td>0.570410</td>
+      <td>0.776200</td>
+      <td>-0.152173</td>
+      <td>1.070509</td>
+      <td>0.988581</td>
+      <td>0.957797</td>
       <td>True</td>
-      <td>12.771700</td>
+      <td>20.505654</td>
     </tr>
     <tr>
       <th>...</th>
@@ -570,62 +570,62 @@ keywords are unexpanded, not using
     <tr>
       <th>9995</th>
       <td>0.0</td>
-      <td>0.667676</td>
-      <td>-1.204735</td>
-      <td>0.718812</td>
-      <td>1.290126</td>
-      <td>0.827897</td>
-      <td>-0.559983</td>
+      <td>0.905736</td>
+      <td>0.511396</td>
+      <td>-2.379331</td>
+      <td>-0.356520</td>
+      <td>0.151227</td>
+      <td>1.441019</td>
       <td>True</td>
-      <td>11.977867</td>
+      <td>6.464785</td>
     </tr>
     <tr>
       <th>9996</th>
-      <td>0.0</td>
-      <td>0.130176</td>
-      <td>0.074347</td>
-      <td>-0.666911</td>
-      <td>0.076331</td>
-      <td>0.000560</td>
-      <td>-2.330798</td>
-      <td>False</td>
-      <td>-11.306969</td>
+      <td>1.0</td>
+      <td>0.740021</td>
+      <td>0.044785</td>
+      <td>-1.642771</td>
+      <td>-0.645273</td>
+      <td>0.265780</td>
+      <td>-1.269824</td>
+      <td>True</td>
+      <td>2.976672</td>
     </tr>
     <tr>
       <th>9997</th>
       <td>0.0</td>
-      <td>0.433173</td>
-      <td>0.753908</td>
-      <td>-0.251897</td>
-      <td>0.591148</td>
-      <td>-0.009456</td>
-      <td>-1.532516</td>
+      <td>0.472985</td>
+      <td>0.153037</td>
+      <td>-0.185096</td>
+      <td>2.017649</td>
+      <td>0.203182</td>
+      <td>0.366030</td>
       <td>True</td>
-      <td>4.437768</td>
+      <td>17.291734</td>
     </tr>
     <tr>
       <th>9998</th>
-      <td>0.0</td>
-      <td>0.977617</td>
-      <td>0.492537</td>
-      <td>-0.625352</td>
-      <td>0.414008</td>
-      <td>1.843531</td>
-      <td>1.530027</td>
+      <td>1.0</td>
+      <td>0.622113</td>
+      <td>2.708088</td>
+      <td>-0.342254</td>
+      <td>1.596147</td>
+      <td>1.278149</td>
+      <td>-0.157803</td>
       <td>True</td>
-      <td>16.932968</td>
+      <td>31.408571</td>
     </tr>
     <tr>
       <th>9999</th>
-      <td>0.0</td>
-      <td>0.897557</td>
-      <td>-0.696327</td>
-      <td>0.456254</td>
-      <td>0.639986</td>
-      <td>-1.124114</td>
-      <td>-1.062442</td>
+      <td>1.0</td>
+      <td>0.854854</td>
+      <td>1.418740</td>
+      <td>1.128226</td>
+      <td>-1.142282</td>
+      <td>0.527627</td>
+      <td>0.973770</td>
       <td>True</td>
-      <td>5.829748</td>
+      <td>19.658346</td>
     </tr>
   </tbody>
 </table>
@@ -696,9 +696,9 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ### Estimand : 2
 Estimand name: iv
@@ -748,19 +748,19 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ## Realized estimand
-b: y~v0+W4+W3+W0+W1+W2
+b: y~v0+W4+W1+W2+W3+W0
 Target units: ate
 
 ## Estimate
-Mean value: 10.00003746939231
+Mean value: 9.999601575003886
 p-value: [0.]
 
-Causal Estimate is 10.00003746939231
+Causal Estimate is 9.999601575003886
 </pre></div></div>
 </div>
 </section>
@@ -795,18 +795,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ## Realized estimand
-b: y~v0+W4+W3+W0+W1+W2
+b: y~v0+W4+W1+W2+W3+W0
 Target units: att
 
 ## Estimate
-Mean value: 10.437061240449713
+Mean value: 10.479507177529104
 
-Causal Estimate is 10.437061240449713
+Causal Estimate is 10.479507177529104
 </pre></div></div>
 </div>
 </section>
@@ -838,7 +838,7 @@ propensity_score_stratification
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/usr/local/lib/python3.8/dist-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+/github/home/.cache/pypoetry/virtualenvs/dowhy-oN2hW5jr-py3.8/lib/python3.8/site-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
   y = column_or_1d(y, warn=True)
 </pre></div></div>
 </div>
@@ -856,18 +856,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ## Realized estimand
-b: y~v0+W4+W3+W0+W1+W2
+b: y~v0+W4+W1+W2+W3+W0
 Target units: att
 
 ## Estimate
-Mean value: 10.05834811400354
+Mean value: 10.013339540137093
 
-Causal Estimate is 10.05834811400354
+Causal Estimate is 10.013339540137093
 </pre></div></div>
 </div>
 </section>
@@ -899,7 +899,7 @@ propensity_score_matching
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/usr/local/lib/python3.8/dist-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+/github/home/.cache/pypoetry/virtualenvs/dowhy-oN2hW5jr-py3.8/lib/python3.8/site-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
   y = column_or_1d(y, warn=True)
 </pre></div></div>
 </div>
@@ -917,18 +917,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ## Realized estimand
-b: y~v0+W4+W3+W0+W1+W2
+b: y~v0+W4+W1+W2+W3+W0
 Target units: atc
 
 ## Estimate
-Mean value: 10.041055622428795
+Mean value: 9.94199184707025
 
-Causal Estimate is 10.041055622428795
+Causal Estimate is 9.94199184707025
 </pre></div></div>
 </div>
 </section>
@@ -963,18 +963,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W4,W3,W0,W1,W2])
+─────(E[y|W4,W1,W2,W3,W0])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W3,W0,W1,W2,U) = P(y|v0,W4,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W4,W1,W2,W3,W0,U) = P(y|v0,W4,W1,W2,W3,W0)
 
 ## Realized estimand
-b: y~v0+W4+W3+W0+W1+W2
+b: y~v0+W4+W1+W2+W3+W0
 Target units: ate
 
 ## Estimate
-Mean value: 9.958575006504304
+Mean value: 10.685730529961393
 
-Causal Estimate is 9.958575006504304
+Causal Estimate is 10.685730529961393
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -982,7 +982,7 @@ Causal Estimate is 9.958575006504304
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/usr/local/lib/python3.8/dist-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+/github/home/.cache/pypoetry/virtualenvs/dowhy-oN2hW5jr-py3.8/lib/python3.8/site-packages/sklearn/utils/validation.py:993: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
   y = column_or_1d(y, warn=True)
 </pre></div></div>
 </div>
@@ -1037,9 +1037,9 @@ Estimand assumption 4, outcome_effect_homogeneity: Each unit&#39;s outcome y is 
 Target units: ate
 
 ## Estimate
-Mean value: 9.735324468207647
+Mean value: 9.457295202582356
 
-Causal Estimate is 9.735324468207647
+Causal Estimate is 9.457295202582356
 </pre></div></div>
 </div>
 </section>
@@ -1067,19 +1067,19 @@ Causal Estimate is 9.735324468207647
 <div class="highlight"><pre>
 regression_discontinuity
       local_rd_variable  local_treatment  local_outcome
-0              0.550418            False     -10.615157
-1              0.568180            False     -11.099556
-6              0.494538            False     -13.339382
-8              0.539030            False       2.233510
-12             0.565172            False      -5.429409
+2              0.462169             True      21.715178
+3              0.595242             True      13.882709
+4              0.570410             True      20.505654
+6              0.412700             True       7.145728
+8              0.419588             True       2.037013
 ...                 ...              ...            ...
-9987           0.384703            False      -2.611107
-9988           0.386126            False      -9.950415
-9991           0.358853             True      11.176098
-9992           0.380763             True       8.681010
-9997           0.433173             True       4.437768
+9992           0.548328             True       5.742647
+9993           0.576592             True      29.176224
+9994           0.601522             True      21.629469
+9997           0.472985             True      17.291734
+9998           0.622113             True      31.408571
 
-[2969 rows x 3 columns]
+[3000 rows x 3 columns]
 *** Causal Estimate ***
 
 ## Identified estimand
@@ -1110,9 +1110,9 @@ Estimand assumption 4, outcome_effect_homogeneity: Each unit&#39;s outcome local
 Target units: ate
 
 ## Estimate
-Mean value: 12.96083063198095
+Mean value: 17.43054737588215
 
-Causal Estimate is 12.96083063198095
+Causal Estimate is 17.43054737588215
 </pre></div></div>
 </div>
 </section>
@@ -1152,7 +1152,6 @@ Causal Estimate is 12.96083063198095
     <div class="rst-other-versions">
         <dl>
             <dt>Releases</dt>
-            <dd><a href="../../v0.1-alpha/index.html">v0.1-alpha</a></dd>
             <dd><a href="../../v0.1.1-alpha/index.html">v0.1.1-alpha</a></dd>
             <dd><a href="../../v0.2/index.html">v0.2</a></dd>
             <dd><a href="../../v0.4/index.html">v0.4</a></dd>
@@ -1161,10 +1160,14 @@ Causal Estimate is 12.96083063198095
             <dd><a href="../../v0.6/index.html">v0.6</a></dd>
             <dd><a href="../../v0.7/index.html">v0.7</a></dd>
             <dd><a href="dowhy_estimation_methods.html">v0.7.1</a></dd>
+            <!-- TODO: add mechanism to add new version here. Probably just render them in from generate_docs.sh. -->
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../../main/index.html">main</a></dd>
+            <!-- hard-coding the link to main -->
+            <!-- It would be nice if this opened the same page on main branch, but that seems to be overkill
+                 right now. Therefore defaulting to the starting page (index). -->
+            <dd><a href="/dowhy/main/index.html">main</a></dd>
         </dl>
     </div>
 </div><script>

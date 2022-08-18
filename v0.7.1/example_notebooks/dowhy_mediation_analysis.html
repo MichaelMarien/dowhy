@@ -2,9 +2,17 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B139P18WHM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-B139P18WHM');
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mediation analysis with DoWhy: Direct and Indirect Effects &mdash; DoWhy | An end-to-end library for causal inference  documentation</title>
+  <title>Mediation analysis with DoWhy: Direct and Indirect Effects &mdash; DoWhy  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> DoWhy | An end-to-end library for causal inference
+            <a href="../index.html" class="icon icon-home"> DoWhy
           </a>
               <div class="version">
                 v0.7.1
@@ -109,7 +117,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">DoWhy | An end-to-end library for causal inference</a>
+          <a href="../index.html">DoWhy</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -408,7 +416,7 @@ div.rendered_html tbody tr:hover {
 </style>
 <section id="Mediation-analysis-with-DoWhy:-Direct-and-Indirect-Effects">
 <h1>Mediation analysis with DoWhy: Direct and Indirect Effects<a class="headerlink" href="#Mediation-analysis-with-DoWhy:-Direct-and-Indirect-Effects" title="Permalink to this heading"></a></h1>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -423,14 +431,6 @@ div.rendered_html tbody tr:hover {
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-keywords are unexpanded, not using
-</pre></div></div>
 </div>
 <section id="Creating-a-dataset">
 <h2>Creating a dataset<a class="headerlink" href="#Creating-a-dataset" title="Permalink to this heading"></a></h2>
@@ -456,11 +456,11 @@ keywords are unexpanded, not using
 <div class="output_area docutils container">
 <div class="highlight"><pre>
          FD0        W0        v0          y
-0  13.859457  1.519078  5.054573  29.830304
-1   3.655796  0.696874  0.925278   8.631037
-2   0.344439 -0.564814  0.375890  -0.812414
-3   7.577873  1.404041  2.595056  17.775935
-4   0.106318  0.212512 -0.623213   0.746577
+0 -18.966547 -1.094043 -5.424013 -11.893885
+1   9.467640  0.498377  2.727046   5.734765
+2  -3.032669  0.129642 -0.389696  -0.587757
+3 -19.946839 -1.418572 -5.548414 -13.660000
+4   5.570480  0.536980  1.779029   4.418987
 </pre></div></div>
 </div>
 </section>
@@ -608,7 +608,7 @@ Estimand assumption 3, Second-stage-unconfoundedness: If U→{FD0} and U→y the
 Target units: ate
 
 ## Estimate
-Mean value: 4.796160393610754
+Mean value: 1.253529842543804
 
 </pre></div></div>
 </div>
@@ -626,7 +626,7 @@ Mean value: 4.796160393610754
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.796160393610754 4.795568474887994
+1.253529842543804 1.2528334376423753
 </pre></div></div>
 </div>
 <p>The parameter is called <code class="docutils literal notranslate"><span class="pre">ate</span></code> because in the simulated dataset, the direct effect is set to be zero.</p>
@@ -680,7 +680,7 @@ Estimand assumption 3, Second-stage-unconfoundedness: If U→{FD0} and U→y the
 Target units: ate
 
 ## Estimate
-Mean value: 4.77188713352561e-05
+Mean value: -6.0791494401968293e-05
 
 </pre></div></div>
 </div>
@@ -726,7 +726,6 @@ Mean value: 4.77188713352561e-05
     <div class="rst-other-versions">
         <dl>
             <dt>Releases</dt>
-            <dd><a href="../../v0.1-alpha/index.html">v0.1-alpha</a></dd>
             <dd><a href="../../v0.1.1-alpha/index.html">v0.1.1-alpha</a></dd>
             <dd><a href="../../v0.2/index.html">v0.2</a></dd>
             <dd><a href="../../v0.4/index.html">v0.4</a></dd>
@@ -735,10 +734,14 @@ Mean value: 4.77188713352561e-05
             <dd><a href="../../v0.6/index.html">v0.6</a></dd>
             <dd><a href="../../v0.7/index.html">v0.7</a></dd>
             <dd><a href="dowhy_mediation_analysis.html">v0.7.1</a></dd>
+            <!-- TODO: add mechanism to add new version here. Probably just render them in from generate_docs.sh. -->
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../../main/index.html">main</a></dd>
+            <!-- hard-coding the link to main -->
+            <!-- It would be nice if this opened the same page on main branch, but that seems to be overkill
+                 right now. Therefore defaulting to the starting page (index). -->
+            <dd><a href="/dowhy/main/index.html">main</a></dd>
         </dl>
     </div>
 </div><script>
