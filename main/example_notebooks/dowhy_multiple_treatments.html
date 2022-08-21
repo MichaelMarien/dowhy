@@ -43,6 +43,7 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -716,63 +717,63 @@ div.rendered_html tbody tr:hover {
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.098814</td>
-      <td>0.029759</td>
-      <td>0.155943</td>
-      <td>-1.067810</td>
-      <td>1</td>
-      <td>2</td>
-      <td>13.087494</td>
-      <td>2.809485</td>
-      <td>175.030383</td>
+      <td>0.070303</td>
+      <td>-0.853254</td>
+      <td>0.606594</td>
+      <td>-1.805345</td>
+      <td>0</td>
+      <td>3</td>
+      <td>14.292194</td>
+      <td>-0.527101</td>
+      <td>169.914122</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.588118</td>
-      <td>0.036676</td>
-      <td>0.711452</td>
-      <td>0.400313</td>
+      <td>1.317242</td>
+      <td>0.830691</td>
+      <td>-0.586295</td>
+      <td>-0.265994</td>
       <td>2</td>
       <td>1</td>
-      <td>17.573129</td>
-      <td>13.832944</td>
-      <td>-18.905511</td>
+      <td>14.007398</td>
+      <td>0.633701</td>
+      <td>242.794262</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.371232</td>
-      <td>-0.680830</td>
-      <td>1.974572</td>
-      <td>-0.867716</td>
+      <td>0.393049</td>
+      <td>-0.953484</td>
+      <td>1.732497</td>
+      <td>-1.387912</td>
       <td>2</td>
       <td>3</td>
-      <td>27.468635</td>
-      <td>14.802847</td>
-      <td>-465.439327</td>
+      <td>21.379842</td>
+      <td>3.044878</td>
+      <td>52.718569</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.624275</td>
-      <td>0.400872</td>
-      <td>-2.894912</td>
-      <td>-1.454597</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1.609478</td>
-      <td>-8.333671</td>
-      <td>-101.198173</td>
+      <td>0.614531</td>
+      <td>0.099105</td>
+      <td>1.357461</td>
+      <td>-2.283955</td>
+      <td>1</td>
+      <td>1</td>
+      <td>7.611428</td>
+      <td>1.081787</td>
+      <td>107.298375</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.914514</td>
-      <td>0.642948</td>
-      <td>1.803859</td>
-      <td>1.094566</td>
+      <td>1.058621</td>
+      <td>-1.057463</td>
+      <td>1.819441</td>
+      <td>-3.211920</td>
+      <td>1</td>
       <td>2</td>
-      <td>2</td>
-      <td>24.899211</td>
-      <td>19.768057</td>
-      <td>-76.175141</td>
+      <td>12.905011</td>
+      <td>1.444631</td>
+      <td>125.209833</td>
     </tr>
   </tbody>
 </table>
@@ -825,9 +826,9 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
     d
-─────────(E[y|W3,W0,W1,W2])
+─────────(E[y|W3,W1,W2,W0])
 d[v₀  v₁]
-Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W0,W1,W2,U) = P(y|v0,v1,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W1,W2,W0,U) = P(y|v0,v1,W3,W1,W2,W0)
 
 ### Estimand : 2
 Estimand name: iv
@@ -872,16 +873,16 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
     d
-─────────(E[y|W3,W0,W1,W2])
+─────────(E[y|W3,W1,W2,W0])
 d[v₀  v₁]
-Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W0,W1,W2,U) = P(y|v0,v1,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W1,W2,W0,U) = P(y|v0,v1,W3,W1,W2,W0)
 
 ## Realized estimand
-b: y~v0+v1+W3+W0+W1+W2+v0*X0+v0*X1+v1*X0+v1*X1
+b: y~v0+v1+W3+W1+W2+W0+v0*X0+v0*X1+v1*X0+v1*X1
 Target units: ate
 
 ## Estimate
-Mean value: -6.2927861954038775
+Mean value: -28.523171535528242
 
 </pre></div></div>
 </div>
@@ -914,43 +915,43 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
     d
-─────────(E[y|W3,W0,W1,W2])
+─────────(E[y|W3,W1,W2,W0])
 d[v₀  v₁]
-Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W0,W1,W2,U) = P(y|v0,v1,W3,W0,W1,W2)
+Estimand assumption 1, Unconfoundedness: If U→{v0,v1} and U→y then P(y|v0,v1,W3,W1,W2,W0,U) = P(y|v0,v1,W3,W1,W2,W0)
 
 ## Realized estimand
-b: y~v0+v1+W3+W0+W1+W2+v0*X0+v0*X1+v1*X0+v1*X1
+b: y~v0+v1+W3+W1+W2+W0+v0*X0+v0*X1+v1*X0+v1*X1
 Target units: ate
 
 ## Estimate
-Mean value: -6.2927861954038775
+Mean value: -28.523171535528242
 ### Conditional Estimates
-__categorical__X0             __categorical__X1
-(-4.119000000000001, -1.344]  (-3.8569999999999998, -0.943]   -115.842729
-                              (-0.943, -0.351]                 -88.901892
-                              (-0.351, 0.169]                  -70.258036
-                              (0.169, 0.752]                   -52.358482
-                              (0.752, 4.027]                   -20.759914
-(-1.344, -0.75]               (-3.8569999999999998, -0.943]    -76.453697
-                              (-0.943, -0.351]                 -48.184917
-                              (-0.351, 0.169]                  -29.847959
-                              (0.169, 0.752]                   -12.718229
-                              (0.752, 4.027]                    17.740133
-(-0.75, -0.257]               (-3.8569999999999998, -0.943]    -52.891458
-                              (-0.943, -0.351]                 -24.634103
-                              (-0.351, 0.169]                   -6.391320
-                              (0.169, 0.752]                    11.241385
-                              (0.752, 4.027]                    41.545274
-(-0.257, 0.332]               (-3.8569999999999998, -0.943]    -28.489142
-                              (-0.943, -0.351]                  -1.277256
-                              (-0.351, 0.169]                   16.446605
-                              (0.169, 0.752]                    35.304337
-                              (0.752, 4.027]                    65.296817
-(0.332, 3.379]                (-3.8569999999999998, -0.943]      9.483598
-                              (-0.943, -0.351]                  40.103318
-                              (-0.351, 0.169]                   55.113664
-                              (0.169, 0.752]                    74.773994
-                              (0.752, 4.027]                   104.856381
+__categorical__X0  __categorical__X1
+(-3.403, -0.677]   (-4.364000000000001, -1.636]   -203.886376
+                   (-1.636, -1.045]               -147.017203
+                   (-1.045, -0.546]               -109.101726
+                   (-0.546, 0.0292]                -76.632295
+                   (0.0292, 2.991]                 -21.540038
+(-0.677, -0.0998]  (-4.364000000000001, -1.636]   -152.241229
+                   (-1.636, -1.045]                -94.744472
+                   (-1.045, -0.546]                -60.867991
+                   (-0.546, 0.0292]                -26.465705
+                   (0.0292, 2.991]                  28.812526
+(-0.0998, 0.433]   (-4.364000000000001, -1.636]   -119.616648
+                   (-1.636, -1.045]                -63.887683
+                   (-1.045, -0.546]                -27.621199
+                   (-0.546, 0.0292]                  5.838189
+                   (0.0292, 2.991]                  64.266645
+(0.433, 1.004]     (-4.364000000000001, -1.636]    -86.603454
+                   (-1.636, -1.045]                -32.040158
+                   (-1.045, -0.546]                  4.502934
+                   (-0.546, 0.0292]                 38.989098
+                   (0.0292, 2.991]                  95.376926
+(1.004, 3.778]     (-4.364000000000001, -1.636]    -39.637027
+                   (-1.636, -1.045]                 22.138169
+                   (-1.045, -0.546]                 54.446511
+                   (-0.546, 0.0292]                 88.125673
+                   (0.0292, 2.991]                 146.038394
 dtype: float64
 </pre></div></div>
 </div>

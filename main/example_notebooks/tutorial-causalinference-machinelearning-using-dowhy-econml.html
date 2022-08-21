@@ -43,6 +43,7 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -801,9 +802,9 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W4,W3,W2,W1])
+─────(E[y|W1,W0,W3,W2,W4])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W4,W3,W2,W1,U) = P(y|v0,W0,W4,W3,W2,W1)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W1,W0,W3,W2,W4,U) = P(y|v0,W1,W0,W3,W2,W4)
 
 ### Estimand : 2
 Estimand name: iv
@@ -850,16 +851,16 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W4,W3,W2,W1])
+─────(E[y|W1,W0,W3,W2,W4])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W4,W3,W2,W1,U) = P(y|v0,W0,W4,W3,W2,W1)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W1,W0,W3,W2,W4,U) = P(y|v0,W1,W0,W3,W2,W4)
 
 ## Realized estimand
-b: y~v0+W0+W4+W3+W2+W1
+b: y~v0+W1+W0+W3+W2+W4
 Target units: ate
 
 ## Estimate
-Mean value: 9.898151057861318
+Mean value: 10.019266769435745
 
 </pre></div></div>
 </div>
@@ -883,6 +884,15 @@ Mean value: 9.898151057861318
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+2022-08-21 18:33:09.767679: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-08-21 18:33:09.767722: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
@@ -897,17 +907,18 @@ Estimand type: nonparametric-ate
 Estimand name: backdoor
 Estimand expression:
   d
-─────(E[y|W0,W4,W3,W2,W1])
+─────(E[y|W1,W0,W3,W2,W4])
 d[v₀]
-Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W0,W4,W3,W2,W1,U) = P(y|v0,W0,W4,W3,W2,W1)
+Estimand assumption 1, Unconfoundedness: If U→{v0} and U→y then P(y|v0,W1,W0,W3,W2,W4,U) = P(y|v0,W1,W0,W3,W2,W4)
 
 ## Realized estimand
-b: y~v0+W0+W4+W3+W2+W1 |
+b: y~v0+W1+W0+W3+W2+W4 |
 Target units: ate
 
 ## Estimate
-Mean value: 10.002266196895835
-Effect estimates: [10.0022662 10.0022662 10.0022662 ... 10.0022662 10.0022662 10.0022662]
+Mean value: 10.041814033744199
+Effect estimates: [10.04181403 10.04181403 10.04181403 ... 10.04181403 10.04181403
+ 10.04181403]
 
 </pre></div></div>
 </div>
@@ -931,9 +942,9 @@ estimate value of 0 when the action variable is replaced by a random variable, i
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Use a Placebo Treatment
-Estimated effect:9.898151057861318
-New effect:-0.0036700341372892043
-p value:0.98
+Estimated effect:10.019266769435745
+New effect:0.0001730618053778947
+p value:0.96
 
 </pre></div></div>
 </div>
@@ -985,11 +996,11 @@ than learning a new toolkit. The power of EconML is that you can now implement t
 <div class="output_area docutils container">
 <div class="highlight"><pre>
    Treatment    Outcome        w0         s        w1
-0   9.579597  19.376021 -1.690170  8.519812  2.174325
-1   6.379455  12.681478 -0.307137  0.924636  0.014297
-2  22.693126  44.857170 -3.977369  6.849564  1.866398
-3  12.915677  25.939180 -2.681360  5.851680 -0.193330
-4  22.386045  44.520489 -4.046197  0.163418 -0.377102
+0   6.895132  14.222800  1.229122  1.335404  0.045047
+1  19.303288  38.835610  3.812831  2.567369 -1.793959
+2   5.697767  12.431453  0.728735  9.174565 -0.627937
+3   7.330933  15.261137 -1.651358  8.532528 -1.402822
+4  13.591045  28.925158 -3.197298  7.895936 -2.959853
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1095,9 +1106,9 @@ b: Outcome~Treatment+w1+w0
 Target units: ate
 
 ## Estimate
-Mean value: 1.99818496471419
+Mean value: 1.9989965399925573
 
-Causal Estimate is 1.99818496471419
+Causal Estimate is 1.9989965399925573
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1153,8 +1164,8 @@ b: Outcome~Treatment+w1+w0 |
 Target units: ate
 
 ## Estimate
-Mean value: 1.150092172655412
-Effect estimates: [1.15009217 1.15009217 1.15009217 ... 1.15009217 1.15009217 1.15009217]
+Mean value: 1.1341346221212805
+Effect estimates: [1.13413462 1.13413462 1.13413462 ... 1.13413462 1.13413462 1.13413462]
 
 </pre></div></div>
 </div>
@@ -1177,9 +1188,9 @@ Effect estimates: [1.15009217 1.15009217 1.15009217 ... 1.15009217 1.15009217 1.
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Add a random common cause
-Estimated effect:1.150092172655412
-New effect:1.110646901008807
-p value:0.24
+Estimated effect:1.1341346221212805
+New effect:1.099403218713029
+p value:0.17999999999999994
 
 </pre></div></div>
 </div>
@@ -1200,9 +1211,9 @@ p value:0.24
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Refute: Use a Placebo Treatment
-Estimated effect:1.150092172655412
-New effect:2.351595764642161e-05
-p value:0.47027623271900754
+Estimated effect:1.1341346221212805
+New effect:0.00016873397874795748
+p value:0.3607155848261676
 
 </pre></div></div>
 </div>

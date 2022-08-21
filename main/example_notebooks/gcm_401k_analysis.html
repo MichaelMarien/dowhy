@@ -43,6 +43,7 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -1052,7 +1053,7 @@ age, income, family size, education, marital status, etc. We consider 16 covaria
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Fitting causal mechanism of node smcol: 100%|██████████| 18/18 [00:06&lt;00:00,  2.66it/s]
+Fitting causal mechanism of node smcol: 100%|██████████| 18/18 [00:07&lt;00:00,  2.31it/s]
 </pre></div></div>
 </div>
 <p>Before computing CATE, we first divide households into equi-width bins of income percentiles. This allows us to study the impact on various income groups.</p>
@@ -1109,7 +1110,7 @@ Fitting causal mechanism of node smcol: 100%|██████████| 18/
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating boostrap interval...: 100%|██████████| 100/100 [00:56&lt;00:00,  1.77it/s]
+Estimating boostrap interval...: 100%|██████████| 100/100 [01:03&lt;00:00,  1.57it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -1117,8 +1118,8 @@ Estimating boostrap interval...: 100%|██████████| 100/100 [0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;ate&#39;: 6620.7196359094305, &#39;0%-20%&#39;: 3949.4809484766, &#39;20%-40%&#39;: 3529.9064127035867, &#39;40%-60%&#39;: 5561.86578513163, &#39;60%-80%&#39;: 7644.017707492887, &#39;80%-100%&#39;: 12236.808276019694}
-{&#39;ate&#39;: array([4950.80465775, 8493.18606177]), &#39;0%-20%&#39;: array([2654.69930203, 5496.64503807]), &#39;20%-40%&#39;: array([1561.43530471, 5876.21503555]), &#39;40%-60%&#39;: array([3300.40518216, 8164.67873595]), &#39;60%-80%&#39;: array([ 5060.48385588, 10849.10737155]), &#39;80%-100%&#39;: array([ 5106.51730083, 19552.75169492])}
+{&#39;ate&#39;: 6403.6951485895515, &#39;0%-20%&#39;: 4248.260181154398, &#39;20%-40%&#39;: 3478.207973576836, &#39;40%-60%&#39;: 5643.412143484276, &#39;60%-80%&#39;: 7624.7804787887035, &#39;80%-100%&#39;: 10816.5059818909}
+{&#39;ate&#39;: array([4786.11072899, 8272.845074  ]), &#39;0%-20%&#39;: array([2908.2942792 , 5824.21188838]), &#39;20%-40%&#39;: array([1360.55446154, 5737.3819424 ]), &#39;40%-60%&#39;: array([3473.76188556, 8083.18869026]), &#39;60%-80%&#39;: array([ 5024.54503888, 10490.26280233]), &#39;80%-100%&#39;: array([ 4130.24733376, 17605.90401822])}
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1153,7 +1154,7 @@ Estimating boostrap interval...: 100%|██████████| 100/100 [0
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_20905/1344202636.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &#34;ro-&#34; (-&gt; color=&#39;r&#39;). The keyword argument will take precedence.
+/tmp/ipykernel_20967/1344202636.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &#34;ro-&#34; (-&gt; color=&#39;r&#39;). The keyword argument will take precedence.
   plt.plot((x, x), (ci[0], ci[1]), &#39;ro-&#39;, color=&#39;orange&#39;)
 </pre></div></div>
 </div>
